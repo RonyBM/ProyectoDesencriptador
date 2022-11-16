@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Programa encriptador y Desencriptador de textos en Base64</title>
+	<link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/estilos.cajas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="/js/main.js"></script>
+	<style>
+		pre {
+			overflow-x: auto;
+			white-space: pre-wrap
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://parzibyte.me/blog">
+				<img alt=""
+					src="https://umg.edu.gt/miumg/sesion_files/logo_white.png"
+					style="max-height: 80px" />
+			</a>
+			<button class="navbar-burger is-warning button" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</button>
+		</div>
+		<div class="navbar-menu">
+			<div class="navbar-start">
+				<strong class="navbar-item">Programa encriptador y Desencriptador de textos en Base64</strong>
+			</div>
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () => {
+			const boton = document.querySelector(".navbar-burger");
+			const menu = document.querySelector(".navbar-menu");
+			boton.onclick = () => {
+				menu.classList.toggle("is-active");
+				boton.classList.toggle("is-active");
+			};
+		});
+	</script>
+	<section class="section">
+		<div class="columns">
+			<div class="column">
+				<h2 class="is-size-2">Encriptación</h2>
+				<div class="field">
+					<label class="label">Contraseña</label>
+					<div class="control">
+						<input id="contraseñaEncriptar" class="input" type="password"
+							placeholder="Escribe la contraseña">
+					</div>
+				</div>
+				<div class="field">
+					<label class="label">Información para encriptar</label>
+					<div class="control">
+						<textarea id="informacionEncriptar" class="contenedor"
+							placeholder="Alguna cadena, JSON, etcétera"></textarea>
+					</div>
+				</div>
+				<button class="boton" id="botonEncriptar">Encriptar</button>
+				<div class="field">
+					<label class="label">Resultado</label>
+					<div class="control">
+						<textarea readonly id="resultadoEncriptacion" class="contenedor"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<h2 class="is-size-2">Desencriptación</h2>
+				<div class="field">
+					<label class="label">Contraseña</label>
+					<div class="control">
+						<input class="input" id="contraseñaDesencriptar" type="password"
+							placeholder="Escribe la contraseña">
+					</div>
+				</div>
+				<div class="field">
+					<label class="label">Información para desencriptar, en base64</label>
+					<div class="control">
+						<textarea class="contenedor" id="informacionDesencriptar"
+							placeholder="La cadena cifrada previamente con este programa"></textarea>
+					</div>
+				</div>
+				<button class="boton" id="botonDesencriptar">Desencriptar</button>
+				<div class="field">
+					<label class="label">Resultado</label>
+					<div class="control">
+						<textarea readonly id="resultadoDesencriptacion" class="contenedor"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="content has-text-centered">
+			<p>
+				<strong>Encriptador y Desencriptador</strong> Proyecto para Seminario Hecho por: 
+                <strong>Rony Andree Barán Mata</strong>
+			</p>
+		</div>
+	</footer>
+</body>
+
+</html>
