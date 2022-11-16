@@ -1,3 +1,5 @@
+// Rony Barán Mata
+
 document.addEventListener("DOMContentLoaded", async () => {
 	const $contraseñaEncriptar = document.querySelector("#contraseñaEncriptar"),
 		$informacionEncriptar = document.querySelector("#informacionEncriptar"),
